@@ -1,7 +1,7 @@
 from selenium import webdriver
 from lxml import html, etree
 from pyvirtualdisplay import Display
-
+#test
 display = Display(visible=0, size=(1024, 768))
 display.start()
 
@@ -20,7 +20,7 @@ def rutenAPI(url):
 		method_counts = int(html.xpath("count(//li[@class='ship']/ul/li)"))
 		result = [ship[a-2] + "/" + cost [a-2] for a in range(0, method_counts)]
 		return(result)
-0
+
 	title = html.xpath(u"//h2/text()")
 	init_price = html.xpath(u"//li[@class='initiation']/span/text()")
 	buyout_price = html.xpath(u"//li[@class='price']/span/span[@class='dollar']/text()")
